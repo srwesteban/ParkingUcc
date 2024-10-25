@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import useFormSubmit from "../hooks/useFormSubmit";
 import { PopupComponent } from "../components/PopupComponent"; // Asegúrate de que la ruta sea correcta
+import flecha from '/public/arrowcircle.svg'
 
 export const FormComponent = () => {
   const [email, setEmail] = useState("");
@@ -57,8 +58,8 @@ export const FormComponent = () => {
           >
             <span className="font-bold">Continuar</span>
             <img
-              src="/src/assets/images/arrowcircle.svg"
-              alt="Ícono"
+              src={flecha}
+              alt="->"
               className="ml-2 w-4 h-4"
               id="flecha"
             />
