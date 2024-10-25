@@ -1,0 +1,72 @@
+body {
+  /* background-color: theme('colors.light'); */
+  background: linear-gradient(90deg, #00acc9 0%, #80ba27 100%);
+  font-family: theme("fontFamily.inter");
+}
+
+/* carro */
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100px;
+}
+
+.moving-image {
+  position: absolute;
+  width: 100px;
+  animation: move 5s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+#btn-form {
+  transition: transform 0.3s ease;
+}
+
+#btn-form:hover {
+  transform: translateX(5px);
+}
+
+/* popup */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo difuminado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegúrate de que el popup esté por encima de otros elementos */
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-button {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+}
+.modal-button:hover {
+  transform: translateY(-5px);
+}
