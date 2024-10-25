@@ -56,7 +56,7 @@ export const FormComponent = () => {
           >
             <span className="font-bold">Continuar</span>
             <img
-              src="/src/assets/flecha.png"
+              src="/src/assets/images/flecha.png"
               alt="Ícono"
               className="ml-2 w-4 h-4"
               id="flecha"
