@@ -51,12 +51,13 @@ export const FormComponent = () => {
             required
           />
           <button
+            id="btn-form"
             type="submit"
             className="bg-gradient-primary text-white rounded w-3/6 py-2 flex items-center justify-center"
           >
             <span className="font-bold">Continuar</span>
             <img
-              src="/src/assets/images/flecha.png"
+              src="/src/assets/images/arrowcircle.svg"
               alt="Ícono"
               className="ml-2 w-4 h-4"
               id="flecha"
