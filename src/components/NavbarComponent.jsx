@@ -12,7 +12,7 @@ export const NavbarComponent = () => {
         />
         <a
           href="#"
-          className="ml-4 text-5xl font-bold text-dark" // Usa font-bold para el peso 700
+          className="ml-4 text-5xl font-bold text-dark" 
           aria-current="page"
         >
           Parking Ucc

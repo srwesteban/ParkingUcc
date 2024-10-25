@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import useFormSubmit from "../hooks/useFormSubmit";
-import { PopupComponent } from "../components/PopupComponent"; // Asegúrate de que la ruta sea correcta
+import { PopupComponent } from "../components/PopupComponent";
 import flecha from '/public/arrowcircle.svg'
 
 export const FormComponent = () => {
@@ -67,7 +67,6 @@ export const FormComponent = () => {
         </form>
       </div>
 
-      {/* Renderiza el popup si es necesario */}
       {showPopup && (
         <PopupComponent message={popupMessage} onClose={handlePopupClose} />
       )}
