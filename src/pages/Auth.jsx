@@ -5,7 +5,7 @@ export const Auth = () => {
   const [searchParams] = useSearchParams();
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); // Inicializa el hook useNavigate
+  const navigate = useNavigate(); 
   const handleNavigate = () => {
     navigate("/");
   };
@@ -25,7 +25,7 @@ export const Auth = () => {
 
         if (isValid) {
           setUser({ name: "Usuario Simulado" });
-          navigate("/dashboard"); // Redirige a /dashboard si el código es válido
+          navigate("/dashboard");
         } else {
           setError("Error en autentificacion, intentalo nuevamente");
         }
@@ -33,7 +33,7 @@ export const Auth = () => {
     };
 
     verifyCode();
-  }, [searchParams, navigate]); // Asegúrate de incluir navigate en las dependencias
+  }, [searchParams, navigate]);
 
   return (
     <>

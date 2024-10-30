@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="*" element={<Navigate to="/" />} /> {/* Redirección para rutas no definidas */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );

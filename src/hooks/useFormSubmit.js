@@ -8,7 +8,6 @@ function useFormSubmit(email, setPopupMessage, setShowPopup) {
         return;
       }
       console.log(`Correo enviado: ${email}`);
-      // Envía HTML para el mensaje
       setPopupMessage(email);
       setShowPopup(true);
     },
