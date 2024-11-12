@@ -36,7 +36,6 @@ body {
 }
 
 /* popup */
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -58,6 +57,18 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilo para el mensaje de éxito */
+.modal-success {
+  border: 2px solid #80ba27;
+  background-color: #e6f9e2; /* Verde claro */
+}
+
+.modal-error {
+  border: 2px solid #cf2d1c;
+  background-color: #ffe0e0; /* Rojo claro */
+}
+
+/* Botón */
 .modal-button {
   color: white;
   border: none;
@@ -66,9 +77,21 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+
 .modal-button:hover {
   transform: translateY(-5px);
 }
+
+.bg-primary {
+  background-color: #35424a; /* Puedes ajustar el color del botón */
+}
+
+/* Opcional: Puedes añadir un fondo difuminado específico para errores */
+.modal-error {
+  border: 2px solid #cf2d1c;
+  background-color: #ffe0e0; /* Rojo claro */
+}
+
 
 /*verificacion*/
 .verificacion {
