@@ -1,6 +1,11 @@
 import { useCallback } from "react";
 
 function useFormSubmit(email, setPopupMessage, setShowPopup, setLoading, setIsError) {
+
+  const LOCAL_API_URL = "http://127.0.0.1:8000/api/enviar-correo/";
+
+  const PRODUCTION_API_URL = "https://envio-de-correo.onrender.com/api/enviar-correo/"
+
   return useCallback(
     async (e) => {
       e.preventDefault();
@@ -11,7 +16,7 @@ function useFormSubmit(email, setPopupMessage, setShowPopup, setLoading, setIsEr
       setLoading(true);
 
       try {
-        const response = await fetch("https://envio-de-correo.onrender.com/api/enviar-correo/", {
+        const response = await fetch(LOCAL_API_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
