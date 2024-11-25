@@ -4,6 +4,7 @@ import "../styles/Dashboard.css";
 
 export const Dashboard = () => {
   const URL_BASE = "http://127.0.0.1:8000";
+  const URL_PRO = "https://parking-ucc.vercel.app";
   const location = useLocation();
   const id = location.state?.user?.data?.id_estudiante;
 
@@ -19,7 +20,7 @@ export const Dashboard = () => {
 
     try {
       setLoading(true);
-      const response = await fetch(`${URL_BASE}/api/estudiante/${id}/`);
+      const response = await fetch(`${URL_PRO}/api/estudiante/${id}/`);
       if (!response.ok) {
         throw new Error("Error al obtener los datos del estudiante");
       }
@@ -57,7 +58,7 @@ export const Dashboard = () => {
 
     try {
       setLoading(true);
-      const response = await fetch(`${URL_BASE}/api/estudiante/${id}/placas/`, {
+      const response = await fetch(`${URL_PRO}/api/estudiante/${id}/placas/`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

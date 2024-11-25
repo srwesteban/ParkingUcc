@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 export const Escaner = () => {
+  const URL_BASE = "http://127.0.0.1:8000";
+  const URL_PRO = "https://parking-ucc.vercel.app";
   const [placa, setPlaca] = useState('');
   const [resultado, setResultado] = useState(null);
 
@@ -16,7 +18,7 @@ export const Escaner = () => {
     }
 
     try {
-      const response = await axios.get('http://localhost:8000/api/validar_placa/', {
+      const response = await axios.get(`${URL_PRO}/api/validar_placa/`, {
         params: { placa },
       });
       setResultado(response.data.exists ? 'Placa válida' : 'Placa no registrada');
