@@ -4,7 +4,7 @@ import "../styles/Dashboard.css";
 
 export const Dashboard = () => {
   const URL_BASE = "http://127.0.0.1:8000";
-  const URL_PRO = "https://parking-ucc.vercel.app";
+  const URL_PRO = "https://envio-de-correo.onrender.com";
   const location = useLocation();
   const id = location.state?.user?.data?.id_estudiante;
 
