@@ -1,0 +1,53 @@
+/* Estilo para el texto de "Cargando..." */
+.loading-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3498db;
+  animation: blink 1s ease-in-out infinite;
+  padding: 30px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.placa-input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 15px;
+  width: 200px; /* Ancho aproximado de una placa */
+  height: 50px; /* Altura similar a una placa */
+  font-size: 20px; /* Tamaño de texto grande */
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px; /* Esquinas redondeadas como en las placas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para darle relieve */
+  text-transform: uppercase; /* Letras en mayúsculas */
+  font-family: "Arial Black", Arial, sans-serif; /* Letra gruesa */
+  background-color: #f8d22a;
+}
+
+.placa-input:focus {
+  outline: none;
+  border-color: #007bff; /* Color azul para indicar foco */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.placa-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}

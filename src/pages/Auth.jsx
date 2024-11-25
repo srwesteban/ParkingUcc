@@ -5,7 +5,11 @@ export const Auth = () => {
   const [searchParams] = useSearchParams();
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+
+  const LOCAL_API_URL = "http://127.0.0.1:8000";
+  const PRODUCTION_API_URL = "https://parking-ucc.vercel.app";
+
   const handleNavigate = () => {
     navigate("/");
   };
@@ -13,21 +17,30 @@ export const Auth = () => {
   useEffect(() => {
     const code = searchParams.get("code");
 
-    const simulateBackendVerification = async (code) => {
-      const validCode = "123";
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      return code === validCode;
-    };
-
     const verifyCode = async () => {
       if (code) {
-        const isValid = await simulateBackendVerification(code);
+        try {
+          const response = await fetch(`${LOCAL_API_URL}/api/verificar-token/?code=${code}`);
+          const data = await response.json();
+          console.log("Respuesta de la API:", data);
+          console.log("correo", data.correo);
 
-        if (isValid) {
-          setUser({ name: "Usuario Simulado" });
-          navigate("/dashboard");
-        } else {
-          setError("Error en autentificacion, intentalo nuevamente");
+          if (data.message === "Token válido") {
+            const userResponse = await fetch(`${LOCAL_API_URL}/api/verificar-correo/?correo=${data.correo}`);
+            const userData = await userResponse.json();
+            console.log("Datos de usuario:", userData);
+
+            if (userData.exists) {
+              setUser(userData);
+              navigate("/dashboard", { state: { user: userData } });
+            } else {
+              setError("No se encuentra en la base de datos");
+            }
+          } else {
+            setError("Error en autentificación, intentalo nuevamente");
+          }
+        } catch (error) {
+          setError("Error en la comunicación con el servidor");
         }
       }
     };
