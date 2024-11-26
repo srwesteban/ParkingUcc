@@ -26,7 +26,7 @@ export const Auth = () => {
           console.log("correo", data.correo);
 
           if (data.message === "Token válido") {
-            const userResponse = await fetch(`${LOCAL_API_URL}/api/verificar-correo/?correo=${data.correo}`);
+            const userResponse = await fetch(`${PRODUCTION_API_URL}/api/verificar-correo/?correo=${data.correo}`);
             const userData = await userResponse.json();
             console.log("Datos de usuario:", userData);
 
