@@ -1,0 +1,61 @@
+/* Estilo general para el contenedor */
+.escaner-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Estilo para el título */
+.escaner-title {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el input */
+.escaner-input {
+  padding: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-right: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilo para el botón */
+.escaner-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #35424a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.escaner-button:hover {
+  background-color: #5b6d71;
+}
+
+/* Estilo para el mensaje de resultado */
+.result-message {
+  margin-top: 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-message.success {
+  color: green;
+}
+
+.result-message.error {
+  color: red;
+}
+
+/* Estilo para los íconos */
+.result-icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
