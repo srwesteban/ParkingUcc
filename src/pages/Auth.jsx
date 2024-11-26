@@ -8,7 +8,7 @@ export const Auth = () => {
   const navigate = useNavigate();
 
   const LOCAL_API_URL = "http://127.0.0.1:8000";
-  const PRODUCTION_API_URL = "https://parking-ucc.vercel.app";
+  const PRODUCTION_API_URL = "https://envio-de-correo.onrender.com";
 
   const handleNavigate = () => {
     navigate("/");
