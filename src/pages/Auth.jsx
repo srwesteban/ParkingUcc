@@ -20,7 +20,7 @@ export const Auth = () => {
     const verifyCode = async () => {
       if (code) {
         try {
-          const response = await fetch(`${LOCAL_API_URL}/api/verificar-token/?code=${code}`);
+          const response = await fetch(`${PRODUCTION_API_URL}/api/verificar-token/?code=${code}`);
           const data = await response.json();
           console.log("Respuesta de la API:", data);
           console.log("correo", data.correo);
